@@ -1,47 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Card</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
+    <title>Stride — Bộ sưu tập giày</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="card">
-        <div class="card__heart">
-            <i class='bx bx-heart'></i>
-        </div>
-        <div class="card__cart">
-            <i class='bx bx-cart' ></i>
-        </div>
-        <div class="card__img">
-            <img src="shoe.png" alt="">
-        </div>
-        <div class="card__title">
-            Nike Zoom KD 12
-        </div>
-        <div class="card__price">
-            $99
-        </div>
-        <div class="card__size">
-            <h3>Size: </h3>
-            <span>6</span>
-            <span>7</span>
-            <span>8</span>
-            <span>9</span>
-        </div>
-        <div class="card__color">
-            <h3>Color: </h3>
-            <span class="card__color--green"></span>
-            <span class="card__color--red"></span>
-            <span class="card__color--black"></span>
-        </div>
-        <div class="card__action">
-            <button>Buy Now</button>
-            <button>Add Cart</button>
-        </div>
-    </div>
+    <main class="storefront">
+        <nav class="nav container" aria-label="Điều hướng chính">
+            <a class="brand" href="#">STRIDE<span>.</span></a>
+            <div class="nav-links">
+                <a class="active" href="#san-pham">Sản phẩm</a>
+                <a href="#">Bộ sưu tập</a>
+                <a href="#">Về chúng tôi</a>
+            </div>
+            <div class="nav-actions">
+                <button aria-label="Tìm kiếm"><i class='bx bx-search'></i></button>
+                <button class="bag" aria-label="Giỏ hàng"><i class='bx bx-shopping-bag'></i><span>2</span></button>
+                <button class="menu" aria-label="Mở menu"><i class='bx bx-menu-alt-right'></i></button>
+            </div>
+        </nav>
+
+        <section class="hero container">
+            <div>
+                <p class="eyebrow"><i class='bx bxs-star'></i> DROP MỚI — THU 2024</p>
+                <h1>Bước đi tạo <em>dấu ấn.</em></h1>
+            </div>
+            <p class="hero-copy">Thiết kế dành cho những nhịp chuyển động không ngừng. Khám phá đôi giày hợp với hành trình của bạn.</p>
+        </section>
+
+        <section class="catalogue container" id="san-pham">
+            <div class="catalogue-top">
+                <div>
+                    <p class="section-kicker">LỰA CHỌN CỦA BẠN</p>
+                    <h2>Khám phá bộ sưu tập</h2>
+                </div>
+                <div class="filters" aria-label="Lọc sản phẩm">
+                    <button class="selected">Tất cả <span>08</span></button>
+                    <button>Chạy bộ</button>
+                    <button>Phong cách</button>
+                    <button>Hàng ngày</button>
+                </div>
+            </div>
+
+            <div class="product-grid">
+                <article class="product-card coral">
+                    <div class="product-media"><span class="tag">Mới</span><button class="heart" aria-label="Yêu thích Air Flux"><i class='bx bx-heart'></i></button><img src="shoe.png" alt="Giày Air Flux màu cam" loading="lazy"></div>
+                    <div class="product-info"><div><p>Chạy bộ</p><h3>Air Flux</h3></div><strong>2.490.000₫</strong></div>
+                    <button class="add">Thêm vào giỏ <i class='bx bx-right-arrow-alt'></i></button>
+                </article>
+                <article class="product-card violet">
+                    <div class="product-media"><button class="heart" aria-label="Yêu thích Nova Pace"><i class='bx bx-heart'></i></button><img src="shoe.png" alt="Giày Nova Pace màu tím" loading="lazy"></div>
+                    <div class="product-info"><div><p>Chạy bộ</p><h3>Nova Pace</h3></div><strong>2.750.000₫</strong></div>
+                    <button class="add">Thêm vào giỏ <i class='bx bx-right-arrow-alt'></i></button>
+                </article>
+                <article class="product-card lemon">
+                    <div class="product-media"><span class="tag">-20%</span><button class="heart" aria-label="Yêu thích Daylight Run"><i class='bx bx-heart'></i></button><img src="shoe.png" alt="Giày Daylight Run màu vàng" loading="lazy"></div>
+                    <div class="product-info"><div><p>Hàng ngày</p><h3>Daylight Run</h3></div><strong>1.990.000₫</strong></div>
+                    <button class="add">Thêm vào giỏ <i class='bx bx-right-arrow-alt'></i></button>
+                </article>
+                <article class="product-card blue">
+                    <div class="product-media"><button class="heart" aria-label="Yêu thích Cloud Nine"><i class='bx bx-heart'></i></button><img src="shoe.png" alt="Giày Cloud Nine màu xanh" loading="lazy"></div>
+                    <div class="product-info"><div><p>Phong cách</p><h3>Cloud Nine</h3></div><strong>2.290.000₫</strong></div>
+                    <button class="add">Thêm vào giỏ <i class='bx bx-right-arrow-alt'></i></button>
+                </article>
+                <article class="product-card pink">
+                    <div class="product-media"><span class="tag">Mới</span><button class="heart" aria-label="Yêu thích Bloom 01"><i class='bx bx-heart'></i></button><img src="shoe.png" alt="Giày Bloom 01 màu hồng" loading="lazy"></div>
+                    <div class="product-info"><div><p>Phong cách</p><h3>Bloom 01</h3></div><strong>2.620.000₫</strong></div>
+                    <button class="add">Thêm vào giỏ <i class='bx bx-right-arrow-alt'></i></button>
+                </article>
+                <article class="product-card mint">
+                    <div class="product-media"><button class="heart" aria-label="Yêu thích Motion Lab"><i class='bx bx-heart'></i></button><img src="shoe.png" alt="Giày Motion Lab màu xanh mint" loading="lazy"></div>
+                    <div class="product-info"><div><p>Tập luyện</p><h3>Motion Lab</h3></div><strong>2.350.000₫</strong></div>
+                    <button class="add">Thêm vào giỏ <i class='bx bx-right-arrow-alt'></i></button>
+                </article>
+                <article class="product-card orange">
+                    <div class="product-media"><span class="tag">Bán chạy</span><button class="heart" aria-label="Yêu thích Sprint 86"><i class='bx bx-heart'></i></button><img src="shoe.png" alt="Giày Sprint 86 màu cam" loading="lazy"></div>
+                    <div class="product-info"><div><p>Chạy bộ</p><h3>Sprint 86</h3></div><strong>2.840.000₫</strong></div>
+                    <button class="add">Thêm vào giỏ <i class='bx bx-right-arrow-alt'></i></button>
+                </article>
+                <article class="product-card lavender">
+                    <div class="product-media"><button class="heart" aria-label="Yêu thích Easy Street"><i class='bx bx-heart'></i></button><img src="shoe.png" alt="Giày Easy Street màu lavender" loading="lazy"></div>
+                    <div class="product-info"><div><p>Hàng ngày</p><h3>Easy Street</h3></div><strong>1.890.000₫</strong></div>
+                    <button class="add">Thêm vào giỏ <i class='bx bx-right-arrow-alt'></i></button>
+                </article>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
